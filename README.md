@@ -4,13 +4,13 @@ Twister](https://boardgamegeek.com/boardgame/12995/dungeon-twister). Plus
 précisément, il fournit des schémas JSON pour décrire :
 
   * les types de personnages connus, via le schéma
-    [`characters.json.schema`](characters.json.schema) ;
+    [`characters.schema.json`](characters.schema.json) ;
 
   * l'état d'une partie, via le schéma
-    [`state.json.schema`](state.json.schema) ;
+    [`state.schema.json`](state.schema.json) ;
 
   * un coup à jouer, via le schéma
-    [`transition.json.schema`](transition.json.schema).
+    [`transition.schema.json`](transition.schema.json).
 
 Ces schémas ont vocation à couvrir le jeu de base et les 6 extensions
 officielles pour 2 joueurs. Ils ne couvrent ni les versions à plus de
