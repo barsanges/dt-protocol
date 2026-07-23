@@ -19,3 +19,6 @@ Twister 2:
 Prison](https://boardgamegeek.com/boardgame/42124/dungeon-twister-2-prison)
 ni [Dungeon Twister: The Card
 Game](https://boardgamegeek.com/boardgame/144525/dungeon-twister-the-card-game).
+
+Le dossier `test` contient notamment des exemples de JSON conformes
+aux différents schémas.
