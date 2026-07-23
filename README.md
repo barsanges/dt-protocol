@@ -3,6 +3,9 @@ pour [Dungeon
 Twister](https://boardgamegeek.com/boardgame/12995/dungeon-twister). Plus
 précisément, il fournit des schémas JSON pour décrire :
 
+  * les types de personnages connus, via le schéma
+    `characters.json.schema` ;
+
   * l'état d'une partie, via le schéma `state.json.schema` ;
 
   * un coup à jouer, via le schéma `transition.json.schema`.
