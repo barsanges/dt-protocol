@@ -1,0 +1,31 @@
+{
+    "target": "../../objects.schema.json",
+    "$comment": "TODO",
+    "tests":
+    [
+        {
+            "description": "known objects are valid",
+            "valid": true,
+            "data": "Corde"
+        },
+        {
+            "description": "only known objects are valid",
+            "valid": false,
+            "data": "Barrette à cheveux"
+        },
+        {
+            "description": "accents are relevant",
+            "valid": false,
+            "data": "Anneau de repulsion"
+        },
+        {
+            "description": "a dictionary of objects is not valid",
+            "valid": false,
+            "data":
+            {
+                "Corde": 1,
+                "Clef": 2
+            }
+        }
+    ]
+}

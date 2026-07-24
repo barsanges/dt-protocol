@@ -6,6 +6,9 @@ précisément, il fournit des schémas JSON pour décrire :
   * les types de personnages connus, via le schéma
     [`characters.schema.json`](characters.schema.json) ;
 
+  * les types d'objets connus, via le schéma
+    [`objects.schema.json`](objects.schema.json) ;
+
   * l'état d'une partie, via le schéma
     [`state.schema.json`](state.schema.json) ;
 
