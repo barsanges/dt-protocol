@@ -1,19 +1,26 @@
-Ce dépôt propose les spécifications d'un protocole de communication
-pour [Dungeon
+# Protocole de communication pour _Dungeon Twister_
+
+Ce dépôt propose des schémas JSON pour communiquer l'état et
+l'évolution d'une partie de [Dungeon
 Twister](https://boardgamegeek.com/boardgame/12995/dungeon-twister). Plus
-précisément, il fournit des schémas JSON pour décrire :
+précisément, ces schémas couvrent :
 
-  * les types de personnages connus, via le schéma
-    [`characters.schema.json`](characters.schema.json) ;
+  * les types de personnages connus, via
+    [`characters.schema.json`](schemas/characters.schema.json) ;
 
-  * les types d'objets connus, via le schéma
-    [`objects.schema.json`](objects.schema.json) ;
+  * les types d'objets connus, via
+    [`objects.schema.json`](schemas/objects.schema.json) ;
 
-  * l'état d'une partie, via le schéma
-    [`state.schema.json`](state.schema.json) ;
+  * l'état d'une partie, via
+    [`state.schema.json`](schemas/state.schema.json) ;
 
-  * un coup à jouer, via le schéma
-    [`transition.schema.json`](transition.schema.json).
+  * un coup à jouer, via
+    [`transition.schema.json`](schemas/transition.schema.json).
+
+Le dossier `test` contient notamment des exemples de JSON conformes
+aux différents schémas.
+
+## Périmètre
 
 Ces schémas ont vocation à couvrir le jeu de base et les 6 extensions
 officielles pour 2 joueurs, à savoir :
@@ -45,6 +52,3 @@ solo. Ils ne couvrent pas non plus [Dungeon Twister 2:
 Prison](https://boardgamegeek.com/boardgame/42124/dungeon-twister-2-prison)
 ni [Dungeon Twister: The Card
 Game](https://boardgamegeek.com/boardgame/144525/dungeon-twister-the-card-game).
-
-Le dossier `test` contient notamment des exemples de JSON conformes
-aux différents schémas.
