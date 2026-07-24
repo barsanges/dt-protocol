@@ -1,5 +1,5 @@
 {
-    "target": "../../characters.schema.json",
+    "target": "../../schemas/characters.schema.json",
     "tests":
     [
         {
