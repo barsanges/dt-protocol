@@ -1,0 +1,30 @@
+{
+    "target": "../../characters.schema.json",
+    "tests":
+    [
+        {
+            "description": "known characters are valid",
+            "valid": true,
+            "data": "Gobelin"
+        },
+        {
+            "description": "only known characters are valid",
+            "valid": false,
+            "data": true
+        },
+        {
+            "description": "case is important",
+            "valid": false,
+            "data": "gobelin"
+        },
+        {
+            "description": "an array of characters is not valid",
+            "valid": false,
+            "data":
+            [
+                "Clerc",
+                "Guerrier"
+            ]
+        }
+    ]
+}
