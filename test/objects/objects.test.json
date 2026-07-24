@@ -1,6 +1,5 @@
 {
     "target": "../../objects.schema.json",
-    "$comment": "TODO",
     "tests":
     [
         {
