@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "rooms.schema.json.v1.0.0",
+    "$id": "rooms.schema.json",
     "title": "DungeonTwisterRoom",
     "description": "Salles de Dungeon Twister",
     "enum":
