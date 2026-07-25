@@ -67,8 +67,7 @@ Game](https://boardgamegeek.com/boardgame/144525/dungeon-twister-the-card-game).
 
 Les salles de _Dungeon Twister_ sont organisées par paires. Chaque
 paire est numérotée. En outre, les salles d'une même paire ont des
-sens de rotation opposés : lorsqu'on oriente les salles de manière à
-pouvoir lire leur numéro, l'une tourne dans le sens horaire, et
+sens de rotation opposés : l'une tourne dans le sens horaire, et
 l'autre dans le sens anti-horaire.
 
 Par conséquent, les schémas prévoient d'identifier une salle de
