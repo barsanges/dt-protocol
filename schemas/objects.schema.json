@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "objects.schema.json",
+    "$id": "objects.schema.json.v1.0.0",
     "title": "DungeonTwisterObject",
     "description": "Objets de Dungeon Twister",
     "enum":
