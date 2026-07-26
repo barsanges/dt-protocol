@@ -11,7 +11,7 @@ précisément, ces schémas couvrent :
   * les types d'objets connus, via
     [`objects.schema.json`](schemas/objects.schema.json) ;
 
-  * les salles connues, via
+  * les références des salles connues, via
     [`rooms.schema.json`](schemas/rooms.schema.json) ;
 
   * l'état d'une partie, via
@@ -63,16 +63,20 @@ Prison](https://boardgamegeek.com/boardgame/42124/dungeon-twister-2-prison)
 ni [Dungeon Twister: The Card
 Game](https://boardgamegeek.com/boardgame/144525/dungeon-twister-the-card-game).
 
-## Identification des salles
+## Référencement et identification des salles
 
 Les salles de _Dungeon Twister_ sont organisées par paires. Chaque
 paire est numérotée. En outre, les salles d'une même paire ont des
 sens de rotation opposés : l'une tourne dans le sens horaire, et
 l'autre dans le sens anti-horaire.
 
-Par conséquent, les schémas prévoient d'identifier une salle de
-manière unique par le numéro de sa paire et son sens de rotation. Il
-faut en revanche noter qu'une salle peut être présente plusieurs fois
-dans le labyrinthe, par exemple si les deux joueurs ont choisi l'un et
-l'autre la même paire de salles dans une partie de type "Choix libre
-(forces secrètes)".
+Par conséquent, les schémas référencent chaque salle de manière unique
+par le numéro de sa paire et son sens de rotation (e.g. `[1, "horaire"]`).
+
+Il faut en revanche noter qu'une même référence peut être présente
+plusieurs fois dans le labyrinthe, par exemple si les deux joueurs ont
+choisi l'un et l'autre la même paire de salles dans une partie de type
+"Choix libre (forces secrètes)". En plus de sa référence, on associe
+donc un identifiant unique à chaque salle du labyrinthe, afin de
+pouvoir distinguer sans ambiguïté deux instances différentes d'une
+même référence.
