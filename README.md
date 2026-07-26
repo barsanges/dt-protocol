@@ -71,4 +71,8 @@ sens de rotation opposés : l'une tourne dans le sens horaire, et
 l'autre dans le sens anti-horaire.
 
 Par conséquent, les schémas prévoient d'identifier une salle de
-manière unique par le numéro de sa paire et son sens de rotation.
+manière unique par le numéro de sa paire et son sens de rotation. Il
+faut en revanche noter qu'une salle peut être présente plusieurs fois
+dans le labyrinthe, par exemple si les deux joueurs ont choisi l'un et
+l'autre la même paire de salles dans une partie de type "Choix libre
+(forces secrètes)".
