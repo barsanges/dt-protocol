@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "player.schema.json",
+    "$id": "players.schema.json",
     "title": "DungeonTwisterPlayer",
     "description": "Joueurs de Dungeon Twister",
     "enum":
