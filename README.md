@@ -14,6 +14,12 @@ précisément, ces schémas couvrent :
   * les références des salles connues, via
     [`rooms.schema.json`](schemas/rooms.schema.json) ;
 
+  * les joueurs, via
+    [`players.schema.json`](schemas/players.schema.json) ;
+
+  * les appartenances possibles, via
+    [`memberships.schema.json`](schemas/memberships.schema.json) ;
+
   * l'état d'une partie, via
     [`state.schema.json`](schemas/state.schema.json) ;
 

@@ -1,0 +1,26 @@
+{
+    "target": "../../schemas/players.schema.json",
+    "tests":
+    [
+        {
+            "description": "known players are valid",
+            "valid": true,
+            "data": "bleu"
+        },
+        {
+            "description": "known players are valid",
+            "valid": true,
+            "data": "jaune"
+        },
+        {
+            "description": "only known players are valid",
+            "valid": false,
+            "data": "vert"
+        },
+        {
+            "description": "case is important",
+            "valid": false,
+            "data": "Bleu"
+        }
+    ]
+}

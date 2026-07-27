@@ -5,4 +5,4 @@ metaschema schema:
     jsonschema metaschema {{ schema }}
 
 test:
-    jsonschema test test/ --extension test.json
+    jsonschema test test/ --extension test.json --resolve schemas/ --extension schema.json
