@@ -1,0 +1,128 @@
+{
+    "target": "../../schemas/room_position.schema.json",
+    "tests":
+    [
+        {
+            "description": "a position is a rotation matrix and a translation vector",
+            "valid": true,
+            "data":
+            {
+                "rotation": [[1, 0],
+                             [0, 1]],
+                "translation": [5, 7]
+            }
+        },
+        {
+            "description": "the matrix coefficients may be negative",
+            "valid": true,
+            "data":
+            {
+                "rotation": [[ 0, -1],
+                             [-1,  0]],
+                "translation": [0, 0]
+            }
+        },
+        {
+            "description": "the vector coefficients may be negative",
+            "valid": true,
+            "data":
+            {
+                "rotation": [[1, 0],
+                             [0, 1]],
+                "translation": [-5, -10]
+            }
+        },
+        {
+            "description": "the rotation matrix should be 2x2",
+            "valid": false,
+            "data":
+            {
+                "rotation": [[1, 2, 3],
+                             [0, 4, 8]],
+                "translation": [11, 7]
+            }
+        },
+        {
+            "description": "the rotation matrix should be 2x2",
+            "valid": false,
+            "data":
+            {
+                "rotation": [0, 1],
+                "translation": [5, -3]
+            }
+        },
+        {
+            "description": "the rotation matrix should be 2x2",
+            "valid": false,
+            "data":
+            {
+                "rotation": [[ 0,  1],
+                             [-1,  0],
+                             [ 2, -2],
+                             [ 0,  4]],
+                "translation": [5, -3]
+            }
+        },
+        {
+            "description": "the rotation matrix should be a matrix",
+            "valid": false,
+            "data":
+            {
+                "rotation": [[0, 1, 2],
+                             [5, 4, 3]],
+                "translation": [10, 7]
+            }
+        },
+        {
+            "description": "the translation vector should be 2D",
+            "valid": false,
+            "data":
+            {
+                "rotation": [[1, 0],
+                             [0, 1]],
+                "translation": [10, 8, -4]
+            }
+        },
+        {
+            "description": "the translation vector should be 2D",
+            "valid": false,
+            "data":
+            {
+                "rotation": [[1, 0],
+                             [0, 1]],
+                "translation": [0]
+            }
+        },
+        {
+            "description": "the values of the rotation matrix should be integers",
+            "valid": false,
+            "data":
+            {
+                "rotation": [[1.5, 0.0],
+                             [2.0, -0.9]],
+                "translation": [7, 4]
+            }
+        },
+        {
+            "description": "the values of the translation vectoir should be integers",
+            "valid": false,
+            "data":
+            {
+                "rotation": [[1, 0],
+                             [0, 1]],
+                "translation": [4.5, 2]
+            }
+        },
+        {
+            "description": "unknown fields are ignored",
+            "valid": true,
+            "data":
+            {
+                "rotation": [[1, 0],
+                             [0, 1]],
+                "translation": [4, 4],
+                "autre champ": null
+            }
+        }
+    ]
+}

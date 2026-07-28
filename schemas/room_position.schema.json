@@ -1,0 +1,36 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "room_position.schema.json",
+    "title": "DungeonTwisterRoomPosition",
+    "description": "Position d'une salle au sein du labyrinthe dans Dungeon Twister",
+    "type": "object",
+    "properties":
+    {
+        "rotation":
+        {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items":
+            {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "items":
+                {
+                    "type": "integer"
+                }
+            }
+        },
+        "translation":
+        {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items":
+            {
+                "type": "integer"
+            }
+        }
+    }
+}

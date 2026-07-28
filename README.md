@@ -20,6 +20,12 @@ précisément, ces schémas couvrent :
   * les appartenances possibles, via
     [`memberships.schema.json`](schemas/memberships.schema.json) ;
 
+  * la position d'une cellule au sein d'une salle, via
+    [`cell_position.schema.json`](schemas/cell_position.schema.json) ;
+
+  * la position d'une salle au sein du labyrinthe, via
+    [`room_position.schema.json`](schemas/room_position.schema.json) ;
+
   * l'état d'une partie, via
     [`state.schema.json`](schemas/state.schema.json) ;
 
@@ -86,3 +92,47 @@ choisi l'un et l'autre la même paire de salles dans une partie de type
 donc un identifiant unique à chaque salle du labyrinthe, afin de
 pouvoir distinguer sans ambiguïté deux instances différentes d'une
 même référence.
+
+## Identification des positions
+
+Les schémas prévoient un système de coordonnées à deux niveaux : d'une
+part, chaque salle est dotée de son propre système de coordonnées,
+indépendant de son orientation ; d'autre part, un repère orthonormé au
+niveau du labyrinthe permet de placer les salles et de gérer leur
+orientation.
+
+Par convention, les zones de départ bleue et jaune sont chacunes
+considérées comme une salle à part entière dans ce système de
+coordonnées.
+
+### Position au sein d'une salle
+
+Chaque salle est dotée d'un repère orthonormé, dont l'unité vaut une
+case. L'origine de ce repère est située dans le coin inférieur gauche
+lorsque la salle est orientée de manière à ce que son numéro puisse
+être lu. Par exemple, le repère de la salle `[1, "anti-horaire"]` est
+:
+
+![Coordonnées au sein d'une salle](docs/room_coordinates_example.jpg)
+
+Ce repère ne change pas, quelles que soient l'orientation et la
+position de la salle dans le labyrinthe. Si, par exemple, on faisait
+pivoter de 90° la salle ci-dessus (dans un sens ou dans l'autre), la
+position de la fosse resterait (0, 4), et la herse continuerait de se
+trouver entre les cases (1, 0) et (1, 1).
+
+### Position des salles dans le labyrinthe
+
+Le labyrinthe est lui-même représenté dans un repère orthonormé, dont
+l'unité vaut une case.
+
+Par convention, la zone de départ bleue occupe les positions (0, 0) à
+(0, 9) dans ce repère. Dans le format standard du labyrinthe (4 salles
+de long sur 2 de large), la zone de départ jaune occupe donc les
+positions (21, 0) à (21, 9).
+
+Dans ce contexte, la position d'une salle est décrite par une matrice
+et un vecteur de dimension 2 qui donnent respectivement la rotation et
+la translation à appliquer aux coordonnées dans le repère propre à la
+salle pour les transformer en coordonnées dans le repère global au
+niveau du labyrinthe.
