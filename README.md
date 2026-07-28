@@ -113,7 +113,7 @@ lorsque la salle est orientée de manière à ce que son numéro puisse
 être lu. Par exemple, le repère de la salle `[1, "anti-horaire"]` est
 :
 
-![Coordonnées au sein d'une salle](docs/room_coordinates_example.jpg)
+![Coordonnées au sein d'une salle](docs/room_coordinates_example.png)
 
 Ce repère ne change pas, quelles que soient l'orientation et la
 position de la salle dans le labyrinthe. Si, par exemple, on faisait
