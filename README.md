@@ -131,8 +131,26 @@ Par convention, la zone de départ bleue occupe les positions (0, 0) à
 de long sur 2 de large), la zone de départ jaune occupe donc les
 positions (21, 0) à (21, 9).
 
-Dans ce contexte, la position d'une salle est décrite par une matrice
-et un vecteur de dimension 2 qui donnent respectivement la rotation et
-la translation à appliquer aux coordonnées dans le repère propre à la
-salle pour les transformer en coordonnées dans le repère global au
-niveau du labyrinthe.
+Dans ce contexte, la position d'une salle dans le labyrinthe est
+décrite par la combinaison d'une rotation et d'une translation qui
+permettent de passer du repère propre à la salle au repère du
+labyrinthe. Plus précisèment, on note :
+
+* $u$ les coordonnées d'une cellule dans le repère de la salle ;
+
+* $x$ les coordonnées de cette cellule dans le repère du labyrinthe ;
+
+* $A$ la matrice de rotation associée à la position de la salle ;
+
+* $b$ le vecteur de translation associé à $A$ ;
+
+* $c$ un second vecteur de translation.
+
+On a alors :
+
+$$x = A \cdot u + b + c.$$
+
+$A$ et $b$ permettent de décrire la rotation de la salle par rapport à
+son centre, et donc son orientation ; $c$ décrit la position de la
+salle dans le labyrinthe. De la sorte, lorsque la salle pivote, il
+suffit de changer $A$ et $b$, sans modifier $c$.

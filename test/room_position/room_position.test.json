@@ -3,23 +3,17 @@
     "tests":
     [
         {
-            "description": "a position is a rotation matrix and a translation vector",
+            "description": "a position is the combination of a rotation matrix and two translation vectors",
             "valid": true,
             "data":
             {
-                "rotation": [[1, 0],
-                             [0, 1]],
+                "rotation":
+                {
+                    "matrice": [[1, 0],
+                                [0, 1]],
+                    "vecteur": [0, 0]
+                },
                 "translation": [5, 7]
-            }
-        },
-        {
-            "description": "the matrix coefficients may be negative",
-            "valid": true,
-            "data":
-            {
-                "rotation": [[ 0, -1],
-                             [-1,  0]],
-                "translation": [0, 0]
             }
         },
         {
@@ -27,8 +21,12 @@
             "valid": true,
             "data":
             {
-                "rotation": [[1, 0],
-                             [0, 1]],
+                "rotation":
+                {
+                    "matrice": [[0, -1],
+                                [1,  0]],
+                    "vecteur": [4, 0]
+                },
                 "translation": [-5, -10]
             }
         },
@@ -37,39 +35,37 @@
             "valid": false,
             "data":
             {
-                "rotation": [[1, 2, 3],
-                             [0, 4, 8]],
+                "rotation":
+                {
+                    "matrice": [[0, -1, 0],
+                                [1,  0, 0],
+                                [0,  0, 0]],
+                    "vecteur": [4, 0]
+                },
                 "translation": [11, 7]
             }
         },
         {
-            "description": "the rotation matrix should be 2x2",
+            "description": "the rotation vector should be 2D",
             "valid": false,
             "data":
             {
-                "rotation": [0, 1],
+                "rotation":
+                {
+                    "matrice": [[ 0, 1],
+                                [-1, 0]],
+                    "vecteur": [4]
+                },
                 "translation": [5, -3]
             }
         },
         {
-            "description": "the rotation matrix should be 2x2",
+            "description": "the rotation field should be an object",
             "valid": false,
             "data":
             {
-                "rotation": [[ 0,  1],
-                             [-1,  0],
-                             [ 2, -2],
-                             [ 0,  4]],
-                "translation": [5, -3]
-            }
-        },
-        {
-            "description": "the rotation matrix should be a matrix",
-            "valid": false,
-            "data":
-            {
-                "rotation": [[0, 1, 2],
-                             [5, 4, 3]],
+                "rotation": [[1, 0],
+                             [0, 1]],
                 "translation": [10, 7]
             }
         },
@@ -78,8 +74,12 @@
             "valid": false,
             "data":
             {
-                "rotation": [[1, 0],
-                             [0, 1]],
+                "rotation":
+                {
+                    "matrice":  [[1, 0],
+                                 [0, 1]],
+                    "vecteur": [0, 0]
+                },
                 "translation": [10, 8, -4]
             }
         },
@@ -88,28 +88,26 @@
             "valid": false,
             "data":
             {
-                "rotation": [[1, 0],
-                             [0, 1]],
+                "rotation":
+                {
+                    "matrice":  [[-1,  0],
+                                 [ 0, -1]],
+                    "vecteur": [4, 4]
+                },
                 "translation": [0]
             }
         },
         {
-            "description": "the values of the rotation matrix should be integers",
+            "description": "the values of the translation vector should be integers",
             "valid": false,
             "data":
             {
-                "rotation": [[1.5, 0.0],
-                             [2.0, -0.9]],
-                "translation": [7, 4]
-            }
-        },
-        {
-            "description": "the values of the translation vectoir should be integers",
-            "valid": false,
-            "data":
-            {
-                "rotation": [[1, 0],
-                             [0, 1]],
+                "rotation":
+                {
+                    "matrice":  [[ 0, 1],
+                                 [-1, 0]],
+                    "vecteur": [0, 4]
+                },
                 "translation": [4.5, 2]
             }
         },
@@ -118,8 +116,12 @@
             "valid": true,
             "data":
             {
-                "rotation": [[1, 0],
-                             [0, 1]],
+                "rotation":
+                {
+                    "matrice":  [[1, 0],
+                                 [0, 1]],
+                    "vecteur": [0, 0]
+                },
                 "translation": [4, 4],
                 "autre champ": null
             }

@@ -8,19 +8,29 @@
     {
         "rotation":
         {
-            "type": "array",
-            "minItems": 2,
-            "maxItems": 2,
-            "items":
-            {
-                "type": "array",
-                "minItems": 2,
-                "maxItems": 2,
-                "items":
+            "enum":
+            [
                 {
-                    "type": "integer"
+                    "matrice":  [[1, 0],
+                                 [0, 1]],
+                    "vecteur": [0, 0]
+                },
+                {
+                    "matrice":  [[ 0, 1],
+                                 [-1, 0]],
+                    "vecteur": [0, 4]
+                },
+                {
+                    "matrice":  [[-1,  0],
+                                 [ 0, -1]],
+                    "vecteur": [4, 4]
+                },
+                {
+                    "matrice":  [[0, -1],
+                                 [1,  0]],
+                    "vecteur": [4, 0]
                 }
-            }
+            ]
         },
         "translation":
         {
