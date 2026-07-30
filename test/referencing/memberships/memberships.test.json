@@ -1,5 +1,5 @@
 {
-    "target": "../../schemas/memberships.schema.json",
+    "target": "../../../schemas/referencing/memberships.schema.json",
     "tests":
     [
         {

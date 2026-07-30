@@ -1,5 +1,5 @@
 {
-    "target": "../../schemas/cell_position.schema.json",
+    "target": "../../../schemas/position/cell_position.schema.json",
     "tests":
     [
         {

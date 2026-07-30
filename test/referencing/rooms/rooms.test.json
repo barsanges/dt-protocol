@@ -1,5 +1,5 @@
 {
-    "target": "../../schemas/rooms.schema.json",
+    "target": "../../../schemas/referencing/rooms.schema.json",
     "tests":
     [
         {

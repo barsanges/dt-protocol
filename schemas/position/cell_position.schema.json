@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "cell_position.schema.json",
+    "$id": "position/cell_position.schema.json",
     "title": "DungeonTwisterCellPosition",
     "description": "Position d'une cellule au sein d'une salle dans Dungeon Twister",
     "type": "object",

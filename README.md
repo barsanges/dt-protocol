@@ -5,26 +5,36 @@ l'évolution d'une partie de [Dungeon
 Twister](https://boardgamegeek.com/boardgame/12995/dungeon-twister). Plus
 précisément, ces schémas couvrent :
 
-  * les types de personnages connus, via
-    [`characters.schema.json`](schemas/characters.schema.json) ;
+  * le référencement des éléments du jeu :
 
-  * les types d'objets connus, via
-    [`objects.schema.json`](schemas/objects.schema.json) ;
+	* les types de personnages connus, via
+      [`characters.schema.json`](schemas/referencing/characters.schema.json)
+      ;
 
-  * les références des salles connues, via
-    [`rooms.schema.json`](schemas/rooms.schema.json) ;
+    * les types d'objets connus, via
+      [`objects.schema.json`](schemas/referencing/objects.schema.json)
+      ;
 
-  * les joueurs, via
-    [`players.schema.json`](schemas/players.schema.json) ;
+    * les références des salles connues, via
+      [`rooms.schema.json`](schemas/referencing/rooms.schema.json) ;
 
-  * les appartenances possibles, via
-    [`memberships.schema.json`](schemas/memberships.schema.json) ;
+    * les joueurs, via
+      [`players.schema.json`](schemas/referencing/players.schema.json)
+      ;
 
-  * la position d'une cellule au sein d'une salle, via
-    [`cell_position.schema.json`](schemas/cell_position.schema.json) ;
+    * les appartenances possibles, via
+      [`memberships.schema.json`](schemas/referencing/memberships.schema.json)
+      ;
 
-  * la position d'une salle au sein du labyrinthe, via
-    [`room_position.schema.json`](schemas/room_position.schema.json) ;
+  * les positions :
+
+    * la position d'une case au sein d'une salle, via
+      [`cell_position.schema.json`](schemas/position/cell_position.schema.json)
+      ;
+
+    * la position d'une salle au sein du labyrinthe, via
+      [`room_position.schema.json`](schemas/position/room_position.schema.json)
+      ;
 
   * l'état d'une partie, via
     [`state.schema.json`](schemas/state.schema.json) ;

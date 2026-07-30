@@ -1,5 +1,5 @@
 {
-    "target": "../../schemas/players.schema.json",
+    "target": "../../../schemas/referencing/players.schema.json",
     "tests":
     [
         {
