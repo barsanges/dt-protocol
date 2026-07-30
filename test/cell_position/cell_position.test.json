@@ -74,6 +74,36 @@
                 "coordonnées": [4, 4],
                 "autre champ": null
             }
+        },
+        {
+            "description": "the field salle is required",
+            "valid": false,
+            "data":
+            {
+                "coordonnées": [4, 4]
+            }
+        },
+        {
+            "description": "the field coordonnées is required",
+            "valid": false,
+            "data":
+            {
+                "coordonnées": [4, 4]
+            }
+        },
+        {
+            "description": "the field coordonnées cannot be empty",
+            "valid": false,
+            "data":
+            {
+                "salle": "foobar",
+                "coordonnées": []
+            }
+        },
+        {
+            "description": "the empty object is not valid",
+            "valid": false,
+            "data": {}
         }
     ]
 }

@@ -21,6 +21,16 @@
             "description": "the order of the parameters matters",
             "valid": false,
             "data": ["horaire", 9]
+        },
+        {
+            "description": "the room's reference cannot be empty",
+            "valid": false,
+            "data": []
+        },
+        {
+            "description": "the room's reference cannot be null",
+            "valid": false,
+            "data": null
         }
     ]
 }

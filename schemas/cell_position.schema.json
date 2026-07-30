@@ -20,5 +20,6 @@
                 "type": "integer"
             }
         }
-    }
+    },
+    "required": ["salle", "coordonnées"]
 }

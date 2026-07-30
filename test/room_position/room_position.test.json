@@ -125,6 +125,66 @@
                 "translation": [4, 4],
                 "autre champ": null
             }
+        },
+        {
+            "description": "the field rotation/matrice is required",
+            "valid": false,
+            "data":
+            {
+                "rotation":
+                {
+                    "vecteur": [0, 0]
+                },
+                "translation": [4, 4]
+            }
+        },
+        {
+            "description": "the field rotation/vecteur is required",
+            "valid": false,
+            "data":
+            {
+                "rotation":
+                {
+                    "matrice":  [[1, 0],
+                                 [0, 1]]
+                },
+                "translation": [4, 4]
+            }
+        },
+        {
+            "description": "the field rotation cannot be empty",
+            "valid": false,
+            "data":
+            {
+                "rotation": {},
+                "translation": [4, 4]
+            }
+        },
+        {
+            "description": "the field rotation is required",
+            "valid": false,
+            "data":
+            {
+                "translation": [4, 4]
+            }
+        },
+        {
+            "description": "the field translation is required",
+            "valid": false,
+            "data":
+            {
+                "rotation":
+                {
+                    "matrice":  [[1, 0],
+                                 [0, 1]],
+                    "vecteur": [0, 0]
+                }
+            }
+        },
+        {
+            "description": "the empty object is not valid",
+            "valid": false,
+            "data": {}
         }
     ]
 }
