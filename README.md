@@ -36,6 +36,9 @@ précisément, ces schémas couvrent :
       [`room_position.schema.json`](schemas/position/room_position.schema.json)
       ;
 
+  * les cartes disponibles, via
+    [`deck.schema.json`](schemas/deck.schema.json) ;
+
   * l'état d'une partie, via
     [`state.schema.json`](schemas/state.schema.json) ;
 
