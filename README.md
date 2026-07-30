@@ -136,9 +136,9 @@ décrite par la combinaison d'une rotation et d'une translation qui
 permettent de passer du repère propre à la salle au repère du
 labyrinthe. Plus précisèment, on note :
 
-* $u$ les coordonnées d'une cellule dans le repère de la salle ;
+* $u$ les coordonnées d'une case dans le repère de la salle ;
 
-* $x$ les coordonnées de cette cellule dans le repère du labyrinthe ;
+* $x$ les coordonnées de cette case dans le repère du labyrinthe ;
 
 * $A$ la matrice de rotation associée à la position de la salle ;
 
