@@ -36,8 +36,17 @@ précisément, ces schémas couvrent :
       [`room_position.schema.json`](schemas/position/room_position.schema.json)
       ;
 
-  * les cartes disponibles, via
-    [`deck.schema.json`](schemas/deck.schema.json) ;
+  * les cartes :
+
+    * les cartes action
+      [`action_cards.schema.json`](schemas/cards/action_cards.schema.json) ;
+
+    * les cartes combat
+      [`combat_cards.schema.json`](schemas/cards/combat_cards.schema.json)
+      ;
+
+    * l'ensemble des cartes d'un joueur (main et défausse), via
+      [`deck.schema.json`](schemas/cards/deck.schema.json) ;
 
   * l'état d'une partie, via
     [`state.schema.json`](schemas/state.schema.json) ;
