@@ -1,0 +1,28 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "agent.schema.json",
+    "title": "DungeonTwisterAgent",
+    "description": "Personnage réalisant une action",
+    "type": "object",
+    "properties":
+    {
+        "personnage":
+        {
+            "$ref": "../referencing/characters.schema.json"
+        },
+        "couleur":
+        {
+            "$ref": "../referencing/players.schema.json"
+        },
+        "emplacement":
+        {
+            "$ref": "../position/cell_position.schema.json"
+        }
+    },
+    "required":
+    [
+        "personnage",
+        "couleur",
+        "emplacement"
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "target": "../../../schemas/actions/agent.schema.json",
+    "tests":
+    [
+        {
+            "description": "an agent is identified by its type, its color and its position",
+            "valid": true,
+            "data":
+            {
+                "personnage": "Élémentaire d'eau",
+                "couleur": "jaune",
+                "emplacement":
+                {
+                    "salle": "foo",
+                    "coordonnées": [1, 2]
+                }
+            }
+        },
+        {
+            "description": "the character should be known",
+            "valid": false,
+            "data":
+            {
+                "personnage": "Dragon d'argent",
+                "couleur": "bleu",
+                "emplacement":
+                {
+                    "salle": "bar",
+                    "coordonnées": [0, 1]
+                }
+            }
+        },
+        {
+            "description": "the color should be a valid player",
+            "valid": false,
+            "data":
+            {
+                "personnage": "Momie",
+                "couleur": "vert",
+                "emplacement":
+                {
+                    "salle": "baz",
+                    "coordonnées": [2, 2]
+                }
+            }
+        },
+        {
+            "description": "the field personnage is required",
+            "valid": false,
+            "data":
+            {
+                "couleur": "bleu",
+                "emplacement":
+                {
+                    "salle": "qux",
+                    "coordonnées": [4, 3]
+                }
+            }
+        },
+        {
+            "description": "the field couleur is required",
+            "valid": false,
+            "data":
+            {
+                "personnage": "Nain tueur de trolls",
+                "emplacement":
+                {
+                    "salle": "foo",
+                    "coordonnées": [2, 4]
+                }
+            }
+        },
+        {
+            "description": "the field emplacement is required",
+            "valid": false,
+            "data":
+            {
+                "personnage": "Samouraï",
+                "couleur": "jaune"
+            }
+        },
+        {
+            "description": "unknown fields are ignored",
+            "valid": true,
+            "data":
+            {
+                "personnage": "Archer elfe",
+                "couleur": "jaune",
+                "emplacement":
+                {
+                    "salle": "qux",
+                    "coordonnées": [0, 3]
+                },
+                "commentaire": "un commentaire"
+            }
+        },
+        {
+            "description": "null is not valid",
+            "valid": false,
+            "data": null
+        },
+        {
+            "description": "the empty object is not valid",
+            "valid": false,
+            "data": {}
+        }
+    ]
+}
