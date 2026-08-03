@@ -1,0 +1,286 @@
+{
+    "target": "../../../schemas/actions/jump.schema.json",
+    "tests":
+    [
+        {
+            "description": "a jump is an action",
+            "valid": true,
+            "data":
+            {
+                "type de transition": "saut",
+                "joueur courant": "jaune",
+                "agent":
+                {
+                    "personnage": "Élémentaire de feu",
+                    "couleur": "jaune",
+                    "emplacement":
+                    {
+                        "salle": "foo",
+                        "coordonnées": [1, 2]
+                    }
+                },
+                "objet": "Hache à deux mains",
+                "emplacement d'arrivée":
+                {
+                    "salle": "bar",
+                    "coordonnées": [0, 4]
+                }
+            }
+        },
+        {
+            "description": "the field type de transition should be jump",
+            "valid": false,
+            "data":
+            {
+                "type de transition": "rotation",
+                "joueur courant": "jaune",
+                "agent":
+                {
+                    "personnage": "Élémentaire de feu",
+                    "couleur": "jaune",
+                    "emplacement":
+                    {
+                        "salle": "foo",
+                        "coordonnées": [1, 2]
+                    }
+                },
+                "objet": "Hache à deux mains",
+                "emplacement d'arrivée":
+                {
+                    "salle": "bar",
+                    "coordonnées": [0, 4]
+                }
+            }
+        },
+        {
+            "description": "the field type de transition is required",
+            "valid": false,
+            "data":
+            {
+                "joueur courant": "jaune",
+                "agent":
+                {
+                    "personnage": "Élémentaire de feu",
+                    "couleur": "jaune",
+                    "emplacement":
+                    {
+                        "salle": "foo",
+                        "coordonnées": [1, 2]
+                    }
+                },
+                "objet": "Hache à deux mains",
+                "emplacement d'arrivée":
+                {
+                    "salle": "bar",
+                    "coordonnées": [0, 4]
+                }
+            }
+        },
+        {
+            "description": "the field joueur courant is required",
+            "valid": false,
+            "data":
+            {
+                "type de transition": "saut",
+                "agent":
+                {
+                    "personnage": "Élémentaire de feu",
+                    "couleur": "jaune",
+                    "emplacement":
+                    {
+                        "salle": "foo",
+                        "coordonnées": [1, 2]
+                    }
+                },
+                "objet": "Hache à deux mains",
+                "emplacement d'arrivée":
+                {
+                    "salle": "bar",
+                    "coordonnées": [0, 4]
+                }
+            }
+        },
+        {
+            "description": "the field agent is required",
+            "valid": false,
+            "data":
+            {
+                "type de transition": "saut",
+                "joueur courant": "jaune",
+                "objet": "Hache à deux mains",
+                "emplacement d'arrivée":
+                {
+                    "salle": "bar",
+                    "coordonnées": [0, 4]
+                }
+            }
+        },
+        {
+            "description": "the field emplacement d'arrivée is required",
+            "valid": false,
+            "data":
+            {
+                "type de transition": "saut",
+                "joueur courant": "jaune",
+                "agent":
+                {
+                    "personnage": "Élémentaire de feu",
+                    "couleur": "jaune",
+                    "emplacement":
+                    {
+                        "salle": "foo",
+                        "coordonnées": [1, 2]
+                    }
+                },
+                "objet": "Hache à deux mains"
+            }
+        },
+        {
+            "description": "the field objet is not required",
+            "valid": true,
+            "data":
+            {
+                "type de transition": "saut",
+                "joueur courant": "jaune",
+                "agent":
+                {
+                    "personnage": "Élémentaire de feu",
+                    "couleur": "jaune",
+                    "emplacement":
+                    {
+                        "salle": "foo",
+                        "coordonnées": [1, 2]
+                    }
+                },
+                "emplacement d'arrivée":
+                {
+                    "salle": "bar",
+                    "coordonnées": [0, 4]
+                }
+            }
+        },
+        {
+            "description": "the field objet can be an array of exactly 2 objects",
+            "valid": true,
+            "data":
+            {
+                "type de transition": "saut",
+                "joueur courant": "jaune",
+                "agent":
+                {
+                    "personnage": "Paladin",
+                    "couleur": "jaune",
+                    "emplacement":
+                    {
+                        "salle": "foo",
+                        "coordonnées": [1, 2]
+                    }
+                },
+                "objet":
+                [
+                    "Tueuse de dragon",
+                    "Bouclier contrefeu"
+                ],
+                "emplacement d'arrivée":
+                {
+                    "salle": "bar",
+                    "coordonnées": [0, 4]
+                }
+            }
+        },
+        {
+            "description": "the field objet can be an array of exactly 2 objects",
+            "valid": false,
+            "data":
+            {
+                "type de transition": "saut",
+                "joueur courant": "jaune",
+                "agent":
+                {
+                    "personnage": "Paladin",
+                    "couleur": "jaune",
+                    "emplacement":
+                    {
+                        "salle": "foo",
+                        "coordonnées": [1, 2]
+                    }
+                },
+                "objet":
+                [
+                    "Tueuse de dragon"
+                ],
+                "emplacement d'arrivée":
+                {
+                    "salle": "bar",
+                    "coordonnées": [0, 4]
+                }
+            }
+        },
+        {
+            "description": "the field objet can be an array of exactly 2 objects",
+            "valid": false,
+            "data":
+            {
+                "type de transition": "saut",
+                "joueur courant": "jaune",
+                "agent":
+                {
+                    "personnage": "Paladin",
+                    "couleur": "jaune",
+                    "emplacement":
+                    {
+                        "salle": "foo",
+                        "coordonnées": [1, 2]
+                    }
+                },
+                "objet":
+                [
+                    "Tueuse de dragon",
+                    "Bouclier contrefeu",
+                    "Croix sainte"
+                ],
+                "emplacement d'arrivée":
+                {
+                    "salle": "bar",
+                    "coordonnées": [0, 4]
+                }
+            }
+        },
+        {
+            "description": "unknown fields are ignored",
+            "valid": true,
+            "data":
+            {
+                "type de transition": "saut",
+                "joueur courant": "jaune",
+                "agent":
+                {
+                    "personnage": "Élémentaire de feu",
+                    "couleur": "jaune",
+                    "emplacement":
+                    {
+                        "salle": "foo",
+                        "coordonnées": [1, 2]
+                    }
+                },
+                "objet": "Hache à deux mains",
+                "emplacement d'arrivée":
+                {
+                    "salle": "foo",
+                    "coordonnées": [1, 2]
+                },
+                "commentaire": "un commentaire"
+            }
+        },
+        {
+            "description": "null is not valid",
+            "valid": false,
+            "data": null
+        },
+        {
+            "description": "the empty object is not valid",
+            "valid": false,
+            "data": {}
+        }
+    ]
+}

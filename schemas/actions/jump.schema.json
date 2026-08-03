@@ -1,0 +1,51 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "jump.schema.json",
+    "title": "DungeonTwisterJump",
+    "description": "L'action de sauter",
+    "type": "object",
+    "properties":
+    {
+        "type de transition":
+        {
+            "const": "saut"
+        },
+        "joueur courant":
+        {
+            "$ref": "../referencing/players.schema.json"
+        },
+        "agent":
+        {
+            "$ref": "agent.schema.json"
+        },
+        "objet":
+        {
+            "oneOf":
+            [
+                {
+                    "$ref": "../referencing/objects.schema.json"
+                },
+                {
+                    "type": "array",
+                    "items":
+                    {
+                        "$ref": "../referencing/objects.schema.json"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                }
+            ]
+        },
+        "emplacement d'arrivée":
+        {
+            "$ref": "../position/cell_position.schema.json"
+        }
+    },
+    "required":
+    [
+        "type de transition",
+        "joueur courant",
+        "agent",
+        "emplacement d'arrivée"
+    ]
+}
