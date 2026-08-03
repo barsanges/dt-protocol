@@ -1,0 +1,38 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "rotate.schema.json",
+    "title": "DungeonTwisterRotate",
+    "description": "L'action de faire pivoter une salle de 90°",
+    "type": "object",
+    "properties":
+    {
+        "type de transition":
+        {
+            "const": "rotation"
+        },
+        "joueur courant":
+        {
+            "$ref": "../referencing/players.schema.json"
+        },
+        "agent":
+        {
+            "$ref": "agent.schema.json"
+        },
+        "salle concernée":
+        {
+            "type": "string"
+        },
+        "rotation dans le sens horaire":
+        {
+            "type": "boolean"
+        }
+    },
+    "required":
+    [
+        "type de transition",
+        "joueur courant",
+        "agent",
+        "salle concernée",
+        "rotation dans le sens horaire"
+    ]
+}
