@@ -19,7 +19,7 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "objet": "Hache à deux mains",
+                "emport": "Hache à deux mains",
                 "emplacement d'arrivée":
                 {
                     "salle": "bar",
@@ -44,7 +44,7 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "objet": "Hache à deux mains",
+                "emport": "Hache à deux mains",
                 "emplacement d'arrivée":
                 {
                     "salle": "bar",
@@ -68,7 +68,7 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "objet": "Hache à deux mains",
+                "emport": "Hache à deux mains",
                 "emplacement d'arrivée":
                 {
                     "salle": "bar",
@@ -92,7 +92,7 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "objet": "Hache à deux mains",
+                "emport": "Hache à deux mains",
                 "emplacement d'arrivée":
                 {
                     "salle": "bar",
@@ -107,7 +107,7 @@
             {
                 "type de transition": "saut",
                 "joueur courant": "jaune",
-                "objet": "Hache à deux mains",
+                "emport": "Hache à deux mains",
                 "emplacement d'arrivée":
                 {
                     "salle": "bar",
@@ -132,11 +132,11 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "objet": "Hache à deux mains"
+                "emport": "Hache à deux mains"
             }
         },
         {
-            "description": "the field objet is not required",
+            "description": "the field emport is not required",
             "valid": true,
             "data":
             {
@@ -160,7 +160,7 @@
             }
         },
         {
-            "description": "the field objet can be an array of exactly 2 objects",
+            "description": "the field emport can be an array of exactly 2 items",
             "valid": true,
             "data":
             {
@@ -176,7 +176,7 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "objet":
+                "emport":
                 [
                     "Tueuse de dragon",
                     "Bouclier contrefeu"
@@ -189,7 +189,7 @@
             }
         },
         {
-            "description": "the field objet can be an array of exactly 2 objects",
+            "description": "the field emport can be an array of exactly 2 items",
             "valid": false,
             "data":
             {
@@ -205,7 +205,7 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "objet":
+                "emport":
                 [
                     "Tueuse de dragon"
                 ],
@@ -217,7 +217,7 @@
             }
         },
         {
-            "description": "the field objet can be an array of exactly 2 objects",
+            "description": "the field emport can be an array of exactly 2 items",
             "valid": false,
             "data":
             {
@@ -233,7 +233,7 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "objet":
+                "emport":
                 [
                     "Tueuse de dragon",
                     "Bouclier contrefeu",
@@ -263,7 +263,7 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "objet": "Hache à deux mains",
+                "emport": "Hache à deux mains",
                 "emplacement d'arrivée":
                 {
                     "salle": "foo",
