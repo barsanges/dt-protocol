@@ -23,7 +23,23 @@
             "oneOf":
             [
                 {
-                    "$ref": "../referencing/objects.schema.json"
+                    "type": "object",
+                    "properties":
+                    {
+                        "objet":
+                        {
+                            "$ref": "../referencing/objects.schema.json"
+                        },
+                        "appartenance":
+                        {
+                            "$ref": "../referencing/memberships.schema.json"
+                        }
+                    },
+                    "required":
+                    [
+                        "objet",
+                        "appartenance"
+                    ]
                 },
                 {
                     "$ref": "../referencing/characters.schema.json"
@@ -35,7 +51,23 @@
                         "anyOf":
                         [
                             {
-                                "$ref": "../referencing/objects.schema.json"
+                                "type": "object",
+                                "properties":
+                                {
+                                    "objet":
+                                    {
+                                        "$ref": "../referencing/objects.schema.json"
+                                    },
+                                    "appartenance":
+                                    {
+                                        "$ref": "../referencing/memberships.schema.json"
+                                    }
+                                },
+                                "required":
+                                [
+                                    "objet",
+                                    "appartenance"
+                                ]
                             },
                             {
                                 "$ref": "../referencing/characters.schema.json"

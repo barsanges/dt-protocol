@@ -19,7 +19,11 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "emport": "Hache à deux mains",
+                "emport":
+                {
+                    "objet": "Épée à deux mains",
+                    "appartenance": "neutre"
+                },
                 "emplacement d'arrivée":
                 {
                     "salle": "bar",
@@ -44,7 +48,11 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "emport": "Hache à deux mains",
+                "emport":
+                {
+                    "objet": "Épée à deux mains",
+                    "appartenance": "neutre"
+                },
                 "emplacement d'arrivée":
                 {
                     "salle": "bar",
@@ -68,7 +76,11 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "emport": "Hache à deux mains",
+                "emport":
+                {
+                    "objet": "Épée à deux mains",
+                    "appartenance": "neutre"
+                },
                 "emplacement d'arrivée":
                 {
                     "salle": "bar",
@@ -92,7 +104,11 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "emport": "Hache à deux mains",
+                "emport":
+                {
+                    "objet": "Épée à deux mains",
+                    "appartenance": "neutre"
+                },
                 "emplacement d'arrivée":
                 {
                     "salle": "bar",
@@ -107,7 +123,11 @@
             {
                 "type de transition": "saut",
                 "joueur courant": "jaune",
-                "emport": "Hache à deux mains",
+                "emport":
+                {
+                    "objet": "Épée à deux mains",
+                    "appartenance": "neutre"
+                },
                 "emplacement d'arrivée":
                 {
                     "salle": "bar",
@@ -132,7 +152,11 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "emport": "Hache à deux mains"
+                "emport":
+                {
+                    "objet": "Épée à deux mains",
+                    "appartenance": "neutre"
+                }
             }
         },
         {
@@ -178,8 +202,14 @@
                 },
                 "emport":
                 [
-                    "Tueuse de dragon",
-                    "Bouclier contrefeu"
+                    {
+                        "objet": "Tueuse de dragon",
+                        "appartenance": "bleu"
+                    },
+                    {
+                        "objet": "Bouclier contrefeu",
+                        "appartenance": "jaune"
+                    }
                 ],
                 "emplacement d'arrivée":
                 {
@@ -207,7 +237,10 @@
                 },
                 "emport":
                 [
-                    "Tueuse de dragon"
+                    {
+                        "objet": "Tueuse de dragon",
+                        "appartenance": "bleu"
+                    }
                 ],
                 "emplacement d'arrivée":
                 {
@@ -235,9 +268,18 @@
                 },
                 "emport":
                 [
-                    "Tueuse de dragon",
-                    "Bouclier contrefeu",
-                    "Croix sainte"
+                    {
+                        "objet": "Tueuse de dragon",
+                        "appartenance": "bleu"
+                    },
+                    {
+                        "objet": "Bouclier contrefeu",
+                        "appartenance": "jaune"
+                    },
+                    {
+                        "objet": "Croix sainte",
+                        "appartenance": "jaune"
+                    }
                 ],
                 "emplacement d'arrivée":
                 {
@@ -319,7 +361,10 @@
                 },
                 "emport":
                 [
-                    "Tueuse de dragon",
+                    {
+                        "objet": "Tueuse de dragon",
+                        "appartenance": "bleu"
+                    },
                     "Magophage"
                 ],
                 "emplacement d'arrivée":
@@ -346,7 +391,11 @@
                         "coordonnées": [1, 2]
                     }
                 },
-                "emport": "Hache à deux mains",
+                "emport":
+                {
+                    "objet": "Épée à deux mains",
+                    "appartenance": "neutre"
+                },
                 "emplacement d'arrivée":
                 {
                     "salle": "foo",
