@@ -26,10 +26,21 @@
                     "$ref": "../referencing/objects.schema.json"
                 },
                 {
+                    "$ref": "../referencing/characters.schema.json"
+                },
+                {
                     "type": "array",
                     "items":
                     {
-                        "$ref": "../referencing/objects.schema.json"
+                        "anyOf":
+                        [
+                            {
+                                "$ref": "../referencing/objects.schema.json"
+                            },
+                            {
+                                "$ref": "../referencing/characters.schema.json"
+                            }
+                        ]
                     },
                     "minItems": 2,
                     "maxItems": 2
