@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "rotate.schema.json",
+    "$id": "actions/rotate.schema.json",
     "title": "DungeonTwisterRotate",
     "description": "L'action de faire pivoter une salle de 90°",
     "type": "object",

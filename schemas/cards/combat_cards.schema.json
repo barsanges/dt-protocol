@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "combat_cards.schema.json",
+    "$id": "cards/combat_cards.schema.json",
     "title": "DungeonTwisterCombatCards",
     "description": "Les cartes de combat",
     "enum": [0, 1, 2, 3, 4, 5, 6]

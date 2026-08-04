@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "deck.schema.json",
+    "$id": "cards/deck.schema.json",
     "title": "DungeonTwisterDeck",
     "description": "Les cartes d'un joueur (main et défausse)",
     "type": "object",

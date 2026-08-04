@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "agent.schema.json",
+    "$id": "actions/agent.schema.json",
     "title": "DungeonTwisterAgent",
     "description": "Personnage réalisant une action",
     "type": "object",
