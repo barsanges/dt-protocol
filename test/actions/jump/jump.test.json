@@ -8,7 +8,6 @@
             "data":
             {
                 "type de transition": "saut",
-                "joueur courant": "jaune",
                 "agent":
                 {
                     "personnage": "Élémentaire de feu",
@@ -37,7 +36,6 @@
             "data":
             {
                 "type de transition": "rotation",
-                "joueur courant": "jaune",
                 "agent":
                 {
                     "personnage": "Élémentaire de feu",
@@ -65,35 +63,6 @@
             "valid": false,
             "data":
             {
-                "joueur courant": "jaune",
-                "agent":
-                {
-                    "personnage": "Élémentaire de feu",
-                    "couleur": "jaune",
-                    "emplacement":
-                    {
-                        "salle": "foo",
-                        "coordonnées": [1, 2]
-                    }
-                },
-                "emport":
-                {
-                    "objet": "Épée à deux mains",
-                    "appartenance": "neutre"
-                },
-                "emplacement d'arrivée":
-                {
-                    "salle": "bar",
-                    "coordonnées": [0, 4]
-                }
-            }
-        },
-        {
-            "description": "the field joueur courant is required",
-            "valid": false,
-            "data":
-            {
-                "type de transition": "saut",
                 "agent":
                 {
                     "personnage": "Élémentaire de feu",
@@ -122,7 +91,6 @@
             "data":
             {
                 "type de transition": "saut",
-                "joueur courant": "jaune",
                 "emport":
                 {
                     "objet": "Épée à deux mains",
@@ -141,7 +109,6 @@
             "data":
             {
                 "type de transition": "saut",
-                "joueur courant": "jaune",
                 "agent":
                 {
                     "personnage": "Élémentaire de feu",
@@ -165,7 +132,6 @@
             "data":
             {
                 "type de transition": "saut",
-                "joueur courant": "jaune",
                 "agent":
                 {
                     "personnage": "Élémentaire de feu",
@@ -189,7 +155,6 @@
             "data":
             {
                 "type de transition": "saut",
-                "joueur courant": "jaune",
                 "agent":
                 {
                     "personnage": "Paladin",
@@ -224,7 +189,6 @@
             "data":
             {
                 "type de transition": "saut",
-                "joueur courant": "jaune",
                 "agent":
                 {
                     "personnage": "Paladin",
@@ -255,7 +219,6 @@
             "data":
             {
                 "type de transition": "saut",
-                "joueur courant": "jaune",
                 "agent":
                 {
                     "personnage": "Paladin",
@@ -294,7 +257,6 @@
             "data":
             {
                 "type de transition": "saut",
-                "joueur courant": "jaune",
                 "agent":
                 {
                     "personnage": "Assassin",
@@ -319,7 +281,6 @@
             "data":
             {
                 "type de transition": "saut",
-                "joueur courant": "jaune",
                 "agent":
                 {
                     "personnage": "Paladin",
@@ -348,7 +309,6 @@
             "data":
             {
                 "type de transition": "saut",
-                "joueur courant": "jaune",
                 "agent":
                 {
                     "personnage": "Paladin",
@@ -380,7 +340,6 @@
             "data":
             {
                 "type de transition": "saut",
-                "joueur courant": "jaune",
                 "agent":
                 {
                     "personnage": "Élémentaire de feu",

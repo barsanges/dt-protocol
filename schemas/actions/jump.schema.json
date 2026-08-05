@@ -10,10 +10,6 @@
         {
             "const": "saut"
         },
-        "joueur courant":
-        {
-            "$ref": "../referencing/players.schema.json"
-        },
         "agent":
         {
             "$ref": "agent.schema.json"
@@ -87,7 +83,6 @@
     "required":
     [
         "type de transition",
-        "joueur courant",
         "agent",
         "emplacement d'arrivée"
     ]

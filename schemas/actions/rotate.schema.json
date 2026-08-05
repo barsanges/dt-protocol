@@ -10,10 +10,6 @@
         {
             "const": "rotation"
         },
-        "joueur courant":
-        {
-            "$ref": "../referencing/players.schema.json"
-        },
         "agent":
         {
             "$ref": "agent.schema.json"
@@ -30,7 +26,6 @@
     "required":
     [
         "type de transition",
-        "joueur courant",
         "agent",
         "salle concernée",
         "rotation dans le sens horaire"
