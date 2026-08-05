@@ -1,0 +1,64 @@
+{
+    "target": "../../../schemas/transitions/transition.schema.json",
+    "tests":
+    [
+        {
+            "description": "a jump is a transition",
+            "valid": true,
+            "data":
+            {
+                "type de transition": "saut",
+                "agent":
+                {
+                    "personnage": "Élémentaire de feu",
+                    "couleur": "jaune",
+                    "emplacement":
+                    {
+                        "salle": "foo",
+                        "coordonnées": [1, 2]
+                    }
+                },
+                "emport":
+                {
+                    "objet": "Épée à deux mains",
+                    "appartenance": "neutre"
+                },
+                "emplacement d'arrivée":
+                {
+                    "salle": "bar",
+                    "coordonnées": [0, 4]
+                }
+            }
+        },
+        {
+            "description": "a rotation is a transition",
+            "valid": true,
+            "data":
+            {
+                "type de transition": "rotation",
+                "agent":
+                {
+                    "personnage": "Élémentaire d'eau",
+                    "couleur": "bleu",
+                    "emplacement":
+                    {
+                        "salle": "foo",
+                        "coordonnées": [1, 2]
+                    }
+                },
+                "salle concernée": "bar",
+                "rotation dans le sens horaire": true
+            }
+        },
+        {
+            "description": "null is not valid",
+            "valid": false,
+            "data": null
+        },
+        {
+            "description": "the empty object is not valid",
+            "valid": false,
+            "data": {}
+        }
+    ]
+}

@@ -51,8 +51,9 @@ précisément, ces schémas couvrent :
   * l'état d'une partie, via
     [`state.schema.json`](schemas/state.schema.json) ;
 
-  * un coup à jouer, via
-    [`transition.schema.json`](schemas/transition.schema.json).
+  * une transition d'un état à un autre (i.e. : une décision
+    élémentaire de jeu), via
+    [`transition.schema.json`](schemas/transitions/transition.schema.json).
 
 Le dossier `test` contient notamment des exemples de JSON conformes
 aux différents schémas.
