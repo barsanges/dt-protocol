@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "actions/jump.schema.json",
+    "$id": "transitions/jump.schema.json",
     "title": "DungeonTwisterJump",
     "description": "L'action de sauter",
     "type": "object",
@@ -12,7 +12,7 @@
         },
         "agent":
         {
-            "$ref": "agent.schema.json"
+            "$ref": "../agent.schema.json"
         },
         "emport":
         {
