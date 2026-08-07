@@ -1,0 +1,51 @@
+{
+    "target": "../../schemas/etat.schema.json",
+    "tests":
+    [
+        {
+            "description": "the state describes a game",
+            "valid": true,
+            "dataPath": "etat-valide-01.json"
+        },
+        {
+            "description": "the field déroulé/scénario is mandatory",
+            "valid": false,
+            "dataPath": "etat-invalide-01.json"
+        },
+        {
+            "description": "the field déroulé/joueur résolvant is mandatory",
+            "valid": false,
+            "dataPath": "etat-invalide-02.json"
+        },
+        {
+            "description": "the field cartes bleues cannot be empty",
+            "valid": false,
+            "dataPath": "etat-invalide-03.json"
+        },
+        {
+            "description": "the field cartes jaunes cannot be empty",
+            "valid": false,
+            "dataPath": "etat-invalide-04.json"
+        },
+        {
+            "description": "the field déroulé/joueur résolvant can be an array",
+            "valid": true,
+            "dataPath": "etat-valide-02.json"
+        },
+        {
+            "description": "an initial set up (without any character or object) is a valid state",
+            "valid": true,
+            "dataPath": "etat-valide-03.json"
+        },
+        {
+            "description": "an initial set up (with the characters and objects) is a valid state",
+            "valid": true,
+            "dataPath": "etat-valide-04.json"
+        },
+        {
+            "description": "the empty object is not valid",
+            "valid": false,
+            "data": {}
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "L'action de sauter",
+    "type": "object",
+    "properties":
+    {
+        "type de transition":
+        {
+            "const": "saut"
+        },
+        "agent":
+        {
+            "$ref": "../agent.schema.json"
+        },
+        "emport":
+        {
+            "oneOf":
+            [
+                {
+                    "type": "object",
+                    "properties":
+                    {
+                        "objet":
+                        {
+                            "$ref": "../references/objets.schema.json"
+                        },
+                        "appartenance":
+                        {
+                            "$ref": "../references/appartenances.schema.json"
+                        }
+                    },
+                    "required":
+                    [
+                        "objet",
+                        "appartenance"
+                    ]
+                },
+                {
+                    "$ref": "../references/personnages.schema.json"
+                },
+                {
+                    "type": "array",
+                    "items":
+                    {
+                        "anyOf":
+                        [
+                            {
+                                "type": "object",
+                                "properties":
+                                {
+                                    "objet":
+                                    {
+                                        "$ref": "../references/objets.schema.json"
+                                    },
+                                    "appartenance":
+                                    {
+                                        "$ref": "../references/appartenances.schema.json"
+                                    }
+                                },
+                                "required":
+                                [
+                                    "objet",
+                                    "appartenance"
+                                ]
+                            },
+                            {
+                                "$ref": "../references/personnages.schema.json"
+                            }
+                        ]
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                }
+            ]
+        },
+        "emplacement d'arrivée":
+        {
+            "$ref": "../position/position_case.schema.json"
+        }
+    },
+    "required":
+    [
+        "type de transition",
+        "agent",
+        "emplacement d'arrivée"
+    ]
+}

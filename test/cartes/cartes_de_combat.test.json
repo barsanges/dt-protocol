@@ -1,0 +1,36 @@
+{
+    "target": "../../schemas/cartes/cartes_de_combat.schema.json",
+    "tests":
+    [
+        {
+            "description": "a combat card corresponds to an integer between 0 and 6",
+            "valid": true,
+            "data": 0
+        },
+        {
+            "description": "a combat card corresponds to an integer between 0 and 6",
+            "valid": true,
+            "data": 6
+        },
+        {
+            "description": "a combat card corresponds to an integer between 0 and 6",
+            "valid": false,
+            "data": -1
+        },
+        {
+            "description": "a combat card corresponds to an integer between 0 and 6",
+            "valid": false,
+            "data": 7
+        },
+        {
+            "description": "null is not valid",
+            "valid": false,
+            "data": null
+        },
+        {
+            "description": "the empty object is not valid",
+            "valid": false,
+            "data": {}
+        }
+    ]
+}

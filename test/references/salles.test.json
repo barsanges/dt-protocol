@@ -1,0 +1,36 @@
+{
+    "target": "../../schemas/references/salles.schema.json",
+    "tests":
+    [
+        {
+            "description": "known rooms are valid",
+            "valid": true,
+            "data": [9, "horaire"]
+        },
+        {
+            "description": "only known rooms are valid",
+            "valid": false,
+            "data": [37, "horaire"]
+        },
+        {
+            "description": "hyphen is important",
+            "valid": false,
+            "data": [18, "antihoraire"]
+        },
+        {
+            "description": "the order of the parameters matters",
+            "valid": false,
+            "data": ["horaire", 9]
+        },
+        {
+            "description": "the room's reference cannot be empty",
+            "valid": false,
+            "data": []
+        },
+        {
+            "description": "the room's reference cannot be null",
+            "valid": false,
+            "data": null
+        }
+    ]
+}

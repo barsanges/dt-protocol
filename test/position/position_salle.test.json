@@ -1,0 +1,190 @@
+{
+    "target": "../../schemas/position/position_salle.schema.json",
+    "tests":
+    [
+        {
+            "description": "a position is the combination of a rotation matrix and two translation vectors",
+            "valid": true,
+            "data":
+            {
+                "rotation":
+                {
+                    "matrice": [[1, 0],
+                                [0, 1]],
+                    "vecteur": [0, 0]
+                },
+                "translation": [5, 7]
+            }
+        },
+        {
+            "description": "the vector coefficients may be negative",
+            "valid": true,
+            "data":
+            {
+                "rotation":
+                {
+                    "matrice": [[0, -1],
+                                [1,  0]],
+                    "vecteur": [4, 0]
+                },
+                "translation": [-5, -10]
+            }
+        },
+        {
+            "description": "the rotation matrix should be 2x2",
+            "valid": false,
+            "data":
+            {
+                "rotation":
+                {
+                    "matrice": [[0, -1, 0],
+                                [1,  0, 0],
+                                [0,  0, 0]],
+                    "vecteur": [4, 0]
+                },
+                "translation": [11, 7]
+            }
+        },
+        {
+            "description": "the rotation vector should be 2D",
+            "valid": false,
+            "data":
+            {
+                "rotation":
+                {
+                    "matrice": [[ 0, 1],
+                                [-1, 0]],
+                    "vecteur": [4]
+                },
+                "translation": [5, -3]
+            }
+        },
+        {
+            "description": "the rotation field should be an object",
+            "valid": false,
+            "data":
+            {
+                "rotation": [[1, 0],
+                             [0, 1]],
+                "translation": [10, 7]
+            }
+        },
+        {
+            "description": "the translation vector should be 2D",
+            "valid": false,
+            "data":
+            {
+                "rotation":
+                {
+                    "matrice":  [[1, 0],
+                                 [0, 1]],
+                    "vecteur": [0, 0]
+                },
+                "translation": [10, 8, -4]
+            }
+        },
+        {
+            "description": "the translation vector should be 2D",
+            "valid": false,
+            "data":
+            {
+                "rotation":
+                {
+                    "matrice":  [[-1,  0],
+                                 [ 0, -1]],
+                    "vecteur": [4, 4]
+                },
+                "translation": [0]
+            }
+        },
+        {
+            "description": "the values of the translation vector should be integers",
+            "valid": false,
+            "data":
+            {
+                "rotation":
+                {
+                    "matrice":  [[ 0, 1],
+                                 [-1, 0]],
+                    "vecteur": [0, 4]
+                },
+                "translation": [4.5, 2]
+            }
+        },
+        {
+            "description": "unknown fields are ignored",
+            "valid": true,
+            "data":
+            {
+                "rotation":
+                {
+                    "matrice":  [[1, 0],
+                                 [0, 1]],
+                    "vecteur": [0, 0]
+                },
+                "translation": [4, 4],
+                "autre champ": null
+            }
+        },
+        {
+            "description": "the field rotation/matrice is required",
+            "valid": false,
+            "data":
+            {
+                "rotation":
+                {
+                    "vecteur": [0, 0]
+                },
+                "translation": [4, 4]
+            }
+        },
+        {
+            "description": "the field rotation/vecteur is required",
+            "valid": false,
+            "data":
+            {
+                "rotation":
+                {
+                    "matrice":  [[1, 0],
+                                 [0, 1]]
+                },
+                "translation": [4, 4]
+            }
+        },
+        {
+            "description": "the field rotation cannot be empty",
+            "valid": false,
+            "data":
+            {
+                "rotation": {},
+                "translation": [4, 4]
+            }
+        },
+        {
+            "description": "the field rotation is required",
+            "valid": false,
+            "data":
+            {
+                "translation": [4, 4]
+            }
+        },
+        {
+            "description": "the field translation is required",
+            "valid": false,
+            "data":
+            {
+                "rotation":
+                {
+                    "matrice":  [[1, 0],
+                                 [0, 1]],
+                    "vecteur": [0, 0]
+                }
+            }
+        },
+        {
+            "description": "the empty object is not valid",
+            "valid": false,
+            "data": {}
+        }
+    ]
+}

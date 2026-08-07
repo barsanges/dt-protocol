@@ -1,0 +1,50 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Position d'une salle au sein du labyrinthe dans Dungeon Twister",
+    "type": "object",
+    "properties":
+    {
+        "rotation":
+        {
+            "enum":
+            [
+                {
+                    "matrice":  [[1, 0],
+                                 [0, 1]],
+                    "vecteur": [0, 0]
+                },
+                {
+                    "matrice":  [[ 0, 1],
+                                 [-1, 0]],
+                    "vecteur": [0, 4]
+                },
+                {
+                    "matrice":  [[-1,  0],
+                                 [ 0, -1]],
+                    "vecteur": [4, 4]
+                },
+                {
+                    "matrice":  [[0, -1],
+                                 [1,  0]],
+                    "vecteur": [4, 0]
+                },
+                {
+                    "matrice":  [[0, 1],
+                                 [1, 0]],
+                    "vecteur": [0, 0]
+                }
+            ]
+        },
+        "translation":
+        {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items":
+            {
+                "type": "integer"
+            }
+        }
+    },
+    "required": ["rotation", "translation"]
+}

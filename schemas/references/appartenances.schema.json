@@ -1,0 +1,13 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Appartenance dans Dungeon Twister",
+    "oneOf":
+    [
+        {
+            "$ref": "joueurs.schema.json"
+        },
+        {
+            "enum": ["neutre"]
+        }
+    ]
+}

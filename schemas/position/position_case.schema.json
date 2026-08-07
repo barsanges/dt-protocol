@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Position d'une cellule au sein d'une salle dans Dungeon Twister",
+    "type": "object",
+    "properties":
+    {
+        "salle":
+        {
+            "type": "string"
+        },
+        "coordonnées":
+        {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items":
+            {
+                "type": "integer"
+            }
+        }
+    },
+    "required": ["salle"]
+}

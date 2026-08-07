@@ -1,0 +1,193 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Etat d'une partie de Dungeon Twister, vu par un arbitre omniscient",
+    "type": "object",
+    "properties":
+    {
+        "salles":
+        {
+            "description": "Les salles du labyrinthe",
+            "type": "object",
+            "additionalProperties":
+            {
+                "type": "object",
+                "properties":
+                {
+                    "référence":
+                    {
+                        "$ref": "references/salles.schema.json"
+                    },
+                    "position":
+                    {
+                        "$ref": "position/position_salle.schema.json"
+                    },
+                    "la salle est cachée":
+                    {
+                        "type": "object",
+                        "properties":
+                        {
+                            "la référence est connue de":
+                            {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "items":
+                                {
+                                    "$ref": "references/joueurs.schema.json"
+                                }
+                            },
+                            "l'orientation est connue de":
+                            {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "items":
+                                {
+                                    "$ref": "references/joueurs.schema.json"
+                                }
+                            }
+                        },
+                        "required":
+                        [
+                            "la référence est connue de",
+                            "l'orientation est connue de"
+                        ]
+                    }
+                },
+                "required": ["référence", "position"]
+            }
+        },
+        "personnages":
+        {
+            "description": "Les personnage présents dans le labyrinthe",
+            "type": "array",
+            "items":
+            {
+                "type": "object",
+                "properties":
+                {
+                    "couleur":
+                    {
+                        "$ref": "references/joueurs.schema.json"
+                    },
+                    "nature":
+                    {
+                        "$ref": "references/personnages.schema.json"
+                    },
+                    "emplacement":
+                    {
+                        "$ref": "position/position_case.schema.json"
+                    },
+                    "blessé":
+                    {
+                        "type": "boolean"
+                    }
+                },
+                "required":
+                [
+                    "couleur",
+                    "nature",
+                    "emplacement",
+                    "blessé"
+                ]
+            }
+        },
+        "objets":
+        {
+            "description": "Les objets présents dans le labyrinthe",
+            "type": "array",
+            "items":
+            {
+                "type": "object",
+                "properties":
+                {
+                    "appartenance":
+                    {
+                        "$ref": "references/appartenances.schema.json"
+                    },
+                    "nature":
+                    {
+                        "$ref": "references/objets.schema.json"
+                    },
+                    "emplacement":
+                    {
+                        "$ref": "position/position_case.schema.json"
+                    }
+                },
+                "required":
+                [
+                    "couleur",
+                    "nature",
+                    "emplacement"
+                ]
+            }
+        },
+        "cartes bleues":
+        {
+            "description": "Les cartes du joueur bleu (main et défausse)",
+            "$ref": "cartes/paquet.schema.json"
+        },
+        "cartes jaunes":
+        {
+            "description": "Les cartes du joueur jaune (main et défausse)",
+            "$ref": "cartes/paquet.schema.json"
+        },
+        "déroulé":
+        {
+            "description": "Les informations générales et communes sur le déroulé de la partie",
+            "type": "object",
+            "properties":
+            {
+                "scénario":
+                {
+                    "$ref": "references/scenarios.schema.json"
+                },
+                "joueur résolvant":
+                {
+                    "description": "Le joueur qui doit résoudre un effet, même s'il ne s'agit pas nécessairement du joueur actif (e.g. le joueur qui se défend dans un combat)",
+                    "oneOf":
+                    [
+                        {
+                            "$ref": "references/joueurs.schema.json"
+                        },
+                        {
+                            "enum": [["bleu", "jaune"],
+                                     ["jaune", "bleu"]]
+                        }
+                    ]
+                },
+                "joueur actif":
+                {
+                    "description": "Le joueur dont c'est le tour",
+                    "$ref": "references/joueurs.schema.json"
+                },
+                "premier joueur":
+                {
+                    "description": "Le joueur qui a joué une carte action le premier",
+                    "$ref": "references/joueurs.schema.json"
+                },
+                "tour":
+                {
+                    "type": "integer"
+                },
+                "actions restantes":
+                {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            },
+            "required":
+            [
+                "scénario",
+                "joueur résolvant"
+            ]
+        }
+    },
+    "required":
+    [
+        "salles",
+        "personnages",
+        "objets",
+        "cartes bleues",
+        "cartes jaunes",
+        "déroulé"
+    ]
+}

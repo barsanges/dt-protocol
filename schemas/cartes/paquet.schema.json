@@ -1,0 +1,61 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "DungeonTwisterDeck",
+    "description": "Les cartes d'un joueur (main et défausse)",
+    "type": "object",
+    "properties":
+    {
+        "main":
+        {
+            "$ref": "#/$defs/pile"
+        },
+        "défausse":
+        {
+            "$ref": "#/$defs/pile"
+        }
+    },
+    "required":
+    [
+        "main",
+        "défausse"
+    ],
+    "$defs":
+    {
+        "pile":
+        {
+            "description": "Des cartes d'un joueur",
+            "type": "object",
+            "properties":
+            {
+                "cartes sauts":
+                {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "cartes actions":
+                {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items":
+                    {
+                        "$ref": "cartes_action.schema.json"
+                    }
+                },
+                "cartes de combat":
+                {
+                    "type": "array",
+                    "items":
+                    {
+                        "$ref": "cartes_de_combat.schema.json"
+                    }
+                }
+            },
+            "required":
+            [
+                "cartes sauts",
+                "cartes actions",
+                "cartes de combat"
+            ]
+        }
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Les cartes action",
+    "enum": [2, 3, 4, 5]
+}

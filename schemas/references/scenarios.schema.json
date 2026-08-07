@@ -1,0 +1,10 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Scénario de Dungeon Twister, qui inclut potentiellement des règles spéciales",
+    "oneOf":
+    [
+        {
+            "const": "standard"
+        }
+    ]
+}

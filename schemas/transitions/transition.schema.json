@@ -1,7 +1,5 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "transitions/transition.schema.json",
-    "title": "DungeonTwisterTransition",
     "description": "Une transition pour passer d'un état de la partie à un autre",
     "allOf":
     [
@@ -13,10 +11,10 @@
             "anyOf":
             [
                 {
-                    "$ref": "jump.schema.json"
+                    "$ref": "saut.schema.json"
                 },
                 {
-                    "$ref": "rotate.schema.json"
+                    "$ref": "rotation.schema.json"
                 }
             ]
         }
