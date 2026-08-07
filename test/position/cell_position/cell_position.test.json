@@ -84,11 +84,11 @@
             }
         },
         {
-            "description": "the field coordonnées is required",
-            "valid": false,
+            "description": "the field coordonnées is not required",
+            "valid": true,
             "data":
             {
-                "coordonnées": [4, 4]
+                "salle": "foobar"
             }
         },
         {
