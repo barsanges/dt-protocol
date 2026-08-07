@@ -39,7 +39,7 @@
         },
         {
             "description": "an initial set up (with the characters and objects) is a valid state",
-            "valid": false,
+            "valid": true,
             "dataPath": "valid-state-04.json"
         },
         {
