@@ -1,5 +1,5 @@
 {
-    "target": "../../../schemas/cards/deck.schema.json",
+    "target": "../../schemas/cards/deck.schema.json",
     "tests":
     [
         {

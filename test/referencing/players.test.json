@@ -1,31 +1,26 @@
 {
-    "target": "../../../schemas/referencing/memberships.schema.json",
+    "target": "../../schemas/referencing/players.schema.json",
     "tests":
     [
         {
-            "description": "known memberships are valid",
+            "description": "known players are valid",
             "valid": true,
             "data": "bleu"
         },
         {
-            "description": "known memberships are valid",
+            "description": "known players are valid",
             "valid": true,
             "data": "jaune"
         },
         {
-            "description": "known memberships are valid",
-            "valid": true,
-            "data": "neutre"
-        },
-        {
-            "description": "only known memberships are valid",
+            "description": "only known players are valid",
             "valid": false,
             "data": "vert"
         },
         {
-            "description": "membership is a string",
+            "description": "case is important",
             "valid": false,
-            "data": ["bleu", "neutre"]
+            "data": "Bleu"
         },
         {
             "description": "null is not valid",

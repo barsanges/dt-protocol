@@ -1,5 +1,5 @@
 {
-    "target": "../../../schemas/cards/combat_cards.schema.json",
+    "target": "../../schemas/cards/combat_cards.schema.json",
     "tests":
     [
         {

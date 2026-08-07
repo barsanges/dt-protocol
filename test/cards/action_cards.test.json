@@ -1,5 +1,5 @@
 {
-    "target": "../../../schemas/cards/action_cards.schema.json",
+    "target": "../../schemas/cards/action_cards.schema.json",
     "tests":
     [
         {

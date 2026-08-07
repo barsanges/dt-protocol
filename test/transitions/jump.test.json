@@ -1,5 +1,5 @@
 {
-    "target": "../../../schemas/transitions/jump.schema.json",
+    "target": "../../schemas/transitions/jump.schema.json",
     "tests":
     [
         {
