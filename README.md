@@ -144,15 +144,13 @@ pivoter de 90° la salle ci-dessus (dans un sens ou dans l'autre), la
 position de la fosse resterait (0, 4), et la herse continuerait de se
 trouver entre les cases (1, 0) et (1, 1).
 
+Pour les zones de départ, la convention est de considérer qu'un des
+bouts a les coordonnées (0, 0) et l'autre (0, 9).
+
 ### Position des salles dans le labyrinthe
 
 Le labyrinthe est lui-même représenté dans un repère orthonormé, dont
 l'unité vaut une case.
-
-Par convention, la zone de départ bleue occupe les positions (0, 0) à
-(0, 9) dans ce repère. Dans le format standard du labyrinthe (4 salles
-de long sur 2 de large), la zone de départ jaune occupe donc les
-positions (21, 0) à (21, 9).
 
 Dans ce contexte, la position d'une salle dans le labyrinthe est
 décrite par la combinaison d'une rotation et d'une translation qui
@@ -177,3 +175,11 @@ $A$ et $b$ permettent de décrire la rotation de la salle par rapport à
 son centre, et donc son orientation ; $c$ décrit la position de la
 salle dans le labyrinthe. De la sorte, lorsque la salle pivote, il
 suffit de changer $A$ et $b$, sans modifier $c$.
+
+La même logique s'applique pour les zones de départ bleue et jaune, à
+la différence près que, les zones de départ n'ayant pas de centre,
+leur rotation s'effectue par rapport à leur point de coordonnées (0,
+0) ; $b$ est donc toujours le vecteur nul. Par ailleurs, il n'y a que
+deux matrices $A$ possibles (au lieu de quatre pour les autres
+salles) : la matrice identité, et la matrice antidiagonale dont tous
+les éléments non-nuls valent 1.
